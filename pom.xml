@@ -35,7 +35,7 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
-            <version>[1.1, 1.2)</version>
+            <version>1.1</version>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
@@ -45,14 +45,14 @@
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>
-            <version>[1.8,1.9)</version>
+            <version>1.8.0</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
-            <version>[1.8,1.9)</version>
+            <version>1.8.0</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -116,15 +116,17 @@
             </goals>
             <configuration>
               <includes>
-		<include>com.amazonaws:aws-sdk-android</include>
-		<include>commons-codec:commons-codec</include>
-                <include>commons-loggin:commons-logging</include>
-		<include>stax:stax</include>
-		<include>stax:stax-api</include>
-                <include>org.codehaus.jackson:jackson-core-asl</include>
-                <include>org.codehaus.jackson:jackson-mapper-asl</include>
-              </includes>
-              <rules>
+              <!-- exclude these jars for AndroidQuake!!
+	          <include>commons-codec:commons-codec</include>
+                  <include>commons-loggin:commons-logging</include>
+                  <include>org.codehaus.jackson:jackson-core-asl</include>
+                  <include>org.codehaus.jackson:jackson-mapper-asl</include>
+              -->
+                  <include>com.amazonaws:aws-sdk-android</include>
+                  <include>stax:stax</include>
+	          <include>stax:stax-api</include>
+             </includes>
+        <rules>
 		<rule>
 			<pattern>javax.xml.namespace.**</pattern>
 			<result>com.amazonaws.javax.xml.namespace.@1</result>

@@ -1,0 +1,11 @@
+target
+doc
+data
+*.iml
+.idea
+activemq-data
+.classpath
+.project
+.settings
+*.spike
+*~
